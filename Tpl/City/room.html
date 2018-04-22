@@ -1,0 +1,110 @@
+<include file="Public:header" />
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<volist name='jitingmingzi' id='vo1' >
+
+<TR>
+    <TD style="text-align: left;" colSpan="20">
+        <table height="30px" width="100px" border="0" cellpadding="0" cellspacing="0"
+        bordercolor="#DDDDDD">
+        </table>
+        <table valign="top" width="800px" border="0" cellpadding="0" cellspacing="0"
+        bordercolor="#DDDDDD">
+            <tr>
+                <td>
+                    <img src="/heng/getimage.php?1.png" />
+                </td>
+                <TD style="font-size:12px;width:300px">
+                    <span style="font-size:14px">
+                        <b>
+                            {$vo1.yxt_name}
+                        </b>
+                    </span>
+                    <br />
+                    <span style="color:grey;">
+                        {$vo1.yxt_address}
+                        <br />
+                        
+                        <br />
+                        
+                    </span>
+                </TD>
+                <TD style="font-size:12px;">
+                    <b>交通方法</b>：{$vo1.yxt_jtqk}
+                    <br />
+                    <b>本厅可用此方法办理会员及其他付费情况</b>：{$vo1.yxt_hyjg}
+                    <br />
+                    <b>警示！触手出没</b>：{$vo1.yxt_csqk}
+                    <br />
+                    <b>最新更新时间</b>：{$vo1.date}
+                    <br />
+                </TD>
+            </tr>
+        </table>
+        <table align="center" width="870px" border="0" cellpadding="0" cellspacing="0"
+        bordercolor="#DDDDDD">
+            <tr style="font-size:12px">
+                <td>
+                    <p>
+                        <b>本厅所有的机台一览</b>：
+                    </p>
+                    <br />
+                    <volist name="jitai" id='vo2' >
+                    <hr>
+                    代目：
+                    <img src="/ac/{$vo2.jt_dm}.gif" />
+                    <br />
+                    价格：{$vo2.jt_jg}
+                    <br />
+                    鼓况：{$vo2.jt_gk}
+                    <br />
+                    最后更新时间：{$vo2.date}
+                	  </volist>
+                </td>
+            </tr>
+        </TABLE>
+    </TD>
+</TR>
+<tr>
+    <td colspan="3" height="20">
+    </td>
+</tr>
+</table>
+</td>
+<td background="/img/bg2.png">
+</td>
+</tr>
+</volist>
+<include file="Public:footer" />
+<div id="map_canvas" style="height:90%;top:30px"></div>
+<input id="address" type="textbox" value="Sydney, NSW">
+<input type="button" value="inint" onclick="initialize()">
+    <input type="button" value="Geocode" onclick="codeAddress()">
+<script type="text/javascript">
+  var geocoder;
+  var map;
+  function initialize() {
+    geocoder = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(-34.397, 150.644);
+    var myOptions = {
+      zoom: 8,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  }
+
+  function codeAddress() {
+    var address = document.getElementById("address").value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+            map: map, 
+            position: results[0].geometry.location
+        });
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+</script>

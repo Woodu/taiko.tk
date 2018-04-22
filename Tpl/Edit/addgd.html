@@ -1,0 +1,60 @@
+<layout name="Public:header" cache="60" />
+<tr>
+    <td colspan="3" style="font-size:12px;text-align:center;">
+        <table width="544px" height="30px" border="0" cellpadding="0" cellspacing="0"
+        bordercolor="#DDDDDD">
+        </table>
+        <table width="544px" border="0" cellpadding="0" cellspacing="0" bordercolor="#DDDDDD"
+        align="center">
+            <tbody>
+                <tr>
+                    <td width=544px height=59px background='/img/new_top.jpg'>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td width=544px background='/img/new_bg.jpg'>
+                        <table width=500px align=center>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <b>
+                                            给id为{$yxtid}的基厅<font color=orange><u>{$yxtname}</u></font>添加一台鼓
+                                                                                    </b>
+                                    </p>
+                                    <form method="post" action="/Edit/insertnewac" style="font-size:12px;">
+                                        <input type="hidden" name="yxtid" value="{$yxtid}" />
+                                        代目（请直接输入数字，12增请输入12m，亚洲版请输入11a或12a）：
+                                        <input type="text" name="jt_dm" maxlength=3 style="width:25px" /><br />
+                                        &nbsp; 价格（几币几曲什么的，双人有送么？）：
+                                        <input type="text" name="jt_jg" maxlength=30 style="width:150px" /><br/>
+                                        鼓况（其实不光是感应器鼓皮，音箱好么，有没有黑屏？）：
+                                        <INPUT TYPE=TEXTBOX NAME="jt_gk" maxlength=200 style="width:150px" />
+                                        <hr>
+                                        <p align=right><input type="submit" value="下一步"></p>
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td width=544px height=15px background='/img/new_down.jpg'>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+</table>
+<table width="544px" height="20px" border="0" cellpadding="0" cellspacing="0"
+bordercolor="#DDDDDD">
+</table>
+</td>
+<td background="/img/bg2.png">
+</td>
+</tr>
+<layout name="Public:footer" cache="60" />

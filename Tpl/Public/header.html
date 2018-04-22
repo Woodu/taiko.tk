@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>太鼓太鼓！</title>
+<style type="text/css">
+<!--
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.STYLE1 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 12px;
+}
+.STYLE2 {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.STYLE3 {
+	color: #FF0000;
+	font-size: 12px;
+}
+-->
+</style>
+<script language="javascript" src="/qj.js"></script><script language="javascript" src="/qjf.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#test").floatdiv({left:"10px",top:"50px"});
+});
+</script></head>
+<body background="/img/bg.jpg" text="#000000" bgproperties="fixed">
+<div id="test" style="background-color: #fe6836; width: 140px; padding:0;margin:0;color:white;font-size:12px;"> 
+<img src="/nav/dh.png" /><br /><a href="/"><img src="/nav/HSY.png" /></a><br /><a href="/City/{$CityName}"><img src="/nav/hc.png" /></a><br /><a href="/Edit/"><img src="/nav/bj.png" /></a><br /><a href="/New/"><img src="/nav/jgd.png" /></a>
+</div> 
+<div id="test2" style="background-color: #fe6836; width: 100%; padding:0;margin:0;color:white;font-size:12px;">  
+<form action="/City/fankui" method=POST>反馈点内容如何？<input type=text name=text><input type=hidden name=url value="<php>echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];</php>"   ><input type=submit value=enter></form>
+</div> 
+<div align="center" valign="middle">
+<table width="900" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="180" align="left" valign="middle" bgcolor="#FFFFFF" width="15"></td>
+    <td height="180" align="left" valign="middle" bgcolor="#FFFFFF"><img src="/img/logo.jpg" width="870" height="180" /></td>
+    <td width="15">
+      <table width="15" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="15" background="/img/bg1.png"></td>
+        </tr>
+        <tr>
+          <td height="165" width="15" background="/img/bg2.png"></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td height="255" bgcolor="#FFFFFF"></td>
+    <td valign="top" bgcolor="#FFFFFF"><table width="870" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="428" height="23" bgcolor="#FF660C"><span class="STYLE2">{$CityName}</span></td> 
+    <td width="167" height="23" bgcolor="#FF660C" class="STYLE2">输入需要查找鼓点的城市:</td>
+    <td width="275" bgcolor="#FF660C"><form id="form1" name="form1" method="POST" action="__APP__/City/"><label><input type="text" name="cityName" /></label>　<label><input type="submit" value="确定" />
+</label></form></td>
+	  </tr>

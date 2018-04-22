@@ -1,0 +1,81 @@
+<layout name="Public:header" cache="60" />
+<tr>
+    <td colspan="3" style="font-size:12px;text-align:center;">
+        <table width="544px" height="30px" border="0" cellpadding="0" cellspacing="0"
+        bordercolor="#DDDDDD">
+        </table>
+        <table width="544px" border="0" cellpadding="0" cellspacing="0" bordercolor="#DDDDDD"
+        align="center">
+            <tbody>
+                <tr>
+                    <td width=544px height=59px background='/img/new_top.jpg'>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td width=544px background='/img/new_bg.jpg'>
+                        <table width=500px align=center>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <b>
+                                            录入基厅基本信息（<font color=red>请不要在此页加入机台信息，请在下一步的页面添加！</font>）
+                                        </b>
+                                    </p>
+                                    <form method="post" action="/New/insert" style="font-size:12px;">
+                                    
+                                    
+                                        <input type="hidden" name="securecode" value="{$hash1}" />
+                                        <input type="hidden" name="username" value="{$hash2}" />
+                                        <input type="hidden" name="yxt_area" value="{$location}" />
+                                        厅名：
+                                        <input type=TEXTBOX name="yxt_name" maxlength=15 >
+                                        地址：
+                                        <input type=TEXTBOX name="yxt_address" maxlength=30>
+                                        <br /><hr><br />
+                                        几元几币？如有会员办理情况请一并详细说明<br />
+                                        <INPUT TYPE=TEXTBOX NAME="yxt_hyjg" maxlength=60 style="width:400px" />
+                                        <br /><hr><br />
+                                        关于该厅其他情况（比如触手出没情况或者面基时间等情况）<br />
+                                        <INPUT TYPE=TEXTBOX NAME="yxt_csqk" maxlength=255 style="width:400px" />
+                                        <br /><hr><br />
+                                        交通方式（公交线路？写点就近公交站点也行）<br />
+                                        <INPUT TYPE=TEXTBOX NAME="yxt_jtqk" maxlength=300  style="width:400px" />
+                                        <hr>
+                                        <p align=right>
+                                            验证码：<input type="text" name="verify" ><img id="verifyImg" src="/New/verify" onClick="changeVerify()" title="点击刷新验证码" />
+																						<input type="submit" value="提交">
+                                        </p>
+                                        
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <script language="JavaScript">
+						function changeVerify(){
+							var timenow = new Date().getTime();
+							document.getElementById('verifyImg').src='/New/verify/'+timenow;  
+						}
+						</script>
+            <tbody>
+                <tr>
+                    <td width=544px height=15px background='/img/new_down.jpg'>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+</table>
+<table width="544px" height="20px" border="0" cellpadding="0" cellspacing="0"
+bordercolor="#DDDDDD">
+</table>
+</td>
+<td background="/img/bg2.png">
+</td>
+</tr>
+<layout name="Public:footer" cache="60" />

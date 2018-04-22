@@ -1,0 +1,75 @@
+<layout name="Public:header" cache="60" />
+<tr>
+    <td colspan="3" style="font-size:12px;text-align:center;">
+        <table width="544px" height="30px" border="0" cellpadding="0" cellspacing="0"
+        bordercolor="#DDDDDD">
+        </table>
+        <table width="544px" border="0" cellpadding="0" cellspacing="0" bordercolor="#DDDDDD"
+        align="center">
+            <tbody>
+                <tr>
+                    <td width=544px height=59px background='/img/edit_top.jpg'>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td width=544px background='/img/new_bg.jpg'>
+                        <table width=500px align=center>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <b>
+                                            修改基厅基本信息
+                                        </b>
+                                    </p>
+                                    <form method="post" action="/Edit/submiteditjt" style="font-size:12px;">
+                                    
+                                    <volist name='list' id='vo1' >
+                                        <input type="hidden" name="yxt_id" value="{$vo1.id}" />
+                                        <input type="hidden" name="timestamp" value="{$timestamp}">
+                                        厅名：
+                                        <input type=TEXTBOX name="yxt_name" maxlength=15 value="{$vo1.yxt_name}">
+                                        地址：
+                                        <input type=TEXTBOX name="yxt_address" maxlength=30 value="{$vo1.yxt_address}">
+                                        <br /><hr><br />
+                                        几元几币？如有会员办理情况请一并详细说明<br />
+                                        <INPUT TYPE=TEXTBOX NAME="yxt_hyjg" maxlength=60 value="{$vo1.yxt_hyjg}" style="width:400px" />
+                                        <br /><hr><br />
+                                        关于该厅其他情况（比如触手出没情况或者面基时间等情况）<br />
+                                        <INPUT TYPE=TEXTBOX NAME="yxt_csqk" maxlength=255 value="{$vo1.yxt_csqk}" style="width:400px" />
+                                        <br /><hr><br />
+                                        交通方式（公交线路？写点就近公交站点也行）<br />
+                                        <INPUT TYPE=TEXTBOX NAME="yxt_jtqk" maxlength=300 value="{$vo1.yxt_jtqk}" style="width:400px" />
+                                        <hr>
+                                        <p align=right>
+                                            验证文字（<b>不要修改哟！</b>）<input type="text" name="verify" value="{$verify}">
+																						<input type="submit" value="更新">
+                                        </p>
+                                        </volist>
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td width=544px height=15px background='/img/new_down.jpg'>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+</table>
+<table width="544px" height="20px" border="0" cellpadding="0" cellspacing="0"
+bordercolor="#DDDDDD">
+</table>
+</td>
+<td background="/img/bg2.png">
+</td>
+</tr>
+<layout name="Public:footer" cache="60" />

@@ -1,0 +1,29 @@
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:active {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.STYLE1 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 12px;
+}
+.STYLE2 {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.STYLE3 {
+	color: #FF0000;
+	font-size: 12px;
+}

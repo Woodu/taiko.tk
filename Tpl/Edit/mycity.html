@@ -1,0 +1,38 @@
+<layout name="Public:header" cache="60" />
+
+
+
+  <tr>
+    <td colspan="3" style="text-align:left;">
+    	<p><img src="/img/mycity.jpg" /></p>
+    	<table width="870" border="none" style="font-size:12px;color:black">
+  <tr>
+    <th scope="col">名称</th>
+    <th scope="col">编辑机厅信息</th>
+    <th scope="col">编辑鼓点信息（含新增删除）</th>
+    <th scope="col">删除此机厅</th>
+  </tr>
+    	<volist name='list' id='vo' >
+
+  <tr>
+    <td>{$vo.yxt_name}[{$vo.yxt_area}]</td>
+    <td><a href=/Edit/editjt/?jitingid={$vo.id} style="font-size:12px;color:grey"> 编辑</a></td>
+    <td><a href=/Edit/viewgd/?jitingid={$vo.id} style="font-size:12px;color:grey"> 编辑</a></td>
+    <td><a href=/Edit/delete/?jitingid={$vo.id} onclick= "return okok()" style="font-size:12px;color:grey"> 删除</a></td>
+  </tr>
+
+</volist></table>
+	<table width="870" height="30" border="none" style="font-size:12px;color:black"></table>
+</td>
+	</tr>
+</table>
+</td>
+    <td background="/img/bg2.png"></td>
+  </tr>
+<script>
+function   okok(name){ 
+if   (confirm( "真的删除此鼓点么？"))   return   true; 
+  return   false; 
+} 
+</script>
+<layout name="Public:footer" cache="60" />

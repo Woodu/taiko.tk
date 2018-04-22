@@ -1,0 +1,63 @@
+<layout name="Public:header" cache="60" />
+<tr>
+    <td colspan="3" style="font-size:12px;text-align:center;">
+        <table width="544px" height="30px" border="0" cellpadding="0" cellspacing="0"
+        bordercolor="#DDDDDD">
+        </table>
+        <table width="544px" border="0" cellpadding="0" cellspacing="0" bordercolor="#DDDDDD"
+        align="center">
+            <tbody>
+                <tr>
+                    <td width=544px height=59px background='/img/edit_top.jpg'>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody><volist name='list' id='vo' >
+                <tr>
+                    <td width=544px background='/img/new_bg.jpg'>
+                        <table width=500px align=center>
+                            <tr>
+                                <td>
+                                    <p>
+                                        <b>
+                                            修改id为{$vo.yxtid}的鼓点信息
+                                                                                    </b>
+                                    </p>
+                                    <form method="post" action="/Edit/submiteditac" style="font-size:12px;">
+                                        <input type="hidden" name="yxtid" value="{$vo.yxtid}" />
+                                        <input type="hidden" name="id" value="{$vo.id}" />
+                                        代目（直接输入数字，12增请输入12m，亚洲版请输入11a或12a）：
+                                        <input type="text" name="jt_dm" value="{$vo.jt_dm}" maxlength=3 style="width:25px" /><br />
+                                        &nbsp; 价格（几币几曲什么的，双人有送么？）：
+                                        <input type="text" name="jt_jg" value="{$vo.jt_jg}" maxlength=30 style="width:150px" /><br/>
+                                        鼓况（其实不光是感应器鼓皮，音箱好么，有没有黑屏？）：
+                                        <INPUT TYPE=TEXTBOX NAME="jt_gk" value="{$vo.jt_gk}" maxlength=200 style="width:150px" />
+                                        <hr>
+                                        <input type="checkbox" name="deleted" value="no" />删除确认&nbsp;&nbsp;&nbsp;<input type="submit" value="更新">
+                                         
+                                    </form>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr></volist>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td width=544px height=15px background='/img/new_down.jpg'>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </td>
+</tr>
+</table>
+<table width="544px" height="20px" border="0" cellpadding="0" cellspacing="0"
+bordercolor="#DDDDDD">
+</table>
+</td>
+<td background="/img/bg2.png">
+</td>
+</tr>
+<layout name="Public:footer" cache="60" />

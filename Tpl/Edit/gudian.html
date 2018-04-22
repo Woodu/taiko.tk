@@ -1,0 +1,32 @@
+<layout name="Public:header" cache="60" />
+
+
+
+  <tr>
+    <td colspan="3" style="text-align:left;font-size:12px;color:black;">
+    	<!--<p><img src="/img/mycity.jpg" /></p>-->
+                    <p>
+                        <b>本厅所有的机台一览（点击代目图片可进入编辑），点此<a href=/Edit/addgd/?jitingid={$yxtid}><img src="/img/add.png" /></a></b>：
+                    </p>
+                    <br />
+                    <volist name="list" id='vo2' >
+                    <hr>
+                    代目：
+                    <a href="/Edit/editac?jitingid={$vo2.id}"><img src="/ac/{$vo2.jt_dm}.gif" /></a>
+                    <br />
+                    价格：{$vo2.jt_jg}
+                    <br />
+                    鼓况：{$vo2.jt_gk}
+                	  </volist>
+                	  
+</td>
+	</tr>
+	
+</table>
+<table width="870" height="30" border="0" cellspacing="0" cellpadding="0"><tr><td></td></tr></table>
+
+</td>
+    <td background="/img/bg2.png"></td>
+  </tr>
+
+<layout name="Public:footer" cache="60" />

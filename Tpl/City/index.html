@@ -1,0 +1,19 @@
+<include file="Public:header" />
+
+
+
+  <tr>
+    <td colspan="3" style="text-align:left;">
+    	<p><img src="/img/search.png" /></p>
+    	<ul><volist name='list' id='vo' >
+
+<li><a href=__APP__/City/?ViewJiting={$vo.id}> <span style="font-size:12px;color:black;" >{$vo.yxt_name}</span><span style="font-size:12px;color:grey;"> {$vo.yxt_area}  {$vo.yxt_address}</span></a><br/>
+
+</volist></ul></td>
+	</tr>
+</table>
+</td>
+    <td background="/img/bg2.png"></td>
+  </tr>
+
+<include file="Public:footer" />

@@ -1,0 +1,59 @@
+<include file="Public:header" />
+
+<style>
+.image10 a{
+ background: url(/baidulogin/frombd.jpg) no-repeat bottom left;
+    border: none;
+    width: 283px;
+    height: 179px;
+    display: block;
+ 		float:center;
+ 		margin: auto;
+}
+.image10 a:hover{
+ background: url(/baidulogin/frombd_on.jpg) no-repeat bottom left;
+ border: none;
+ width: 283px;
+ height: 179px;
+ display: block;
+ float:center;
+ margin: auto;
+}
+.image11 a{
+ background: url(/baidulogin/add_zj.jpg) no-repeat bottom left;
+    border: none;
+    width: 283px;
+    height: 179px;
+    display: block;
+ 		float:center;
+ 		margin: auto;
+}
+.image11 a:hover{
+ background: url(/baidulogin/add_zj_on.jpg) no-repeat bottom left;
+ border: none;
+ width: 283px;
+ height: 179px;
+ display: block;
+ float:center;
+ margin: auto;
+}
+</style>
+
+  <tr>
+    <td colspan="3" style="text-align:center;">
+    	<p style="font-size:12px;">选择您添加鼓点的方式！</p>
+    	<table border="0" cellspacing="4" cellpadding="4" align="center"> <tbody><Tr><td><span class=image10><a href="{$loginurl}"></a></span>
+              </td><td><span class=image11><a href="/New/Old"></a></span></td></tr></tbody></table>
+    	<p style="font-size:12px;color:grey;">您可以直接添加或者通过百度登录后添加！使用百度登录可以在稍后编辑您的输入！<br /><b>页面可能需要较长时间与百度服务器通讯并有可能产生失败，此时请刷新即可</b>。首次授权后点击即可无缝跳转，因此我们强烈建议在百度记住帐号密码。</p>
+    	<ul><volist name='list' id='vo' >
+
+<li><a style="font-size:12px;color:black;" href=/City/?ViewJiting={$vo.id}> {$vo.yxt_name}</a><br/>
+
+</volist></ul></td>
+	</tr>
+</table>
+</td>
+    <td background="/img/bg2.png"></td>
+  </tr>
+
+<include file="Public:footer" />
